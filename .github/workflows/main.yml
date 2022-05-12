@@ -16,14 +16,12 @@ jobs:
       - name: install_test
         run: |
           pip install --user cpp-coveralls
-          addons:
-            apt:
-              sources:
-                - ubuntu-toolchain-r-test
-                - llvm-toolchain-precise-3.6
-                packages:
-                  - g++-7
-                  - clang-3.6
+  
+          sources:
+             - ubuntu-toolchain-r-test
+             - llvm-toolchain-precise-3.6
+          packages:
+             - g++-7
       - name: build
         shell: bash
         run: |
