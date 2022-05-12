@@ -17,9 +17,8 @@ jobs:
       - name: build
         shell: bash
         run: |
-          cmake -H. -B_build
-          cmake --build _build
-      - name: Install gtest manually
-        run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
-      - name: Run Test
-        run: /home/runner/work/github_actions_gtest_example/github_actions_gtest_example/build/test/github_actions_gtest_example.test
+          cmake CMakeLists.txt
+          #cmake -H. -B_build
+          #cmake --build _build
+          cmake --build
+          ./configure --enable-gcov && make && make check
