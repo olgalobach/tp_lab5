@@ -9,7 +9,7 @@ set(
   CACHE STRING "Default cache server"
 )
 
-include("tools/gate/cmake/HunterGate.cmake")
+include("${CMAKE_CURRENT_SOURCE_DIR}/tools/gate/cmake/HunterGate.cmake")
 
 huntergate(
   URL "https://github.com/cpp-pm/hunter/archive/v0.23.314.tar.gz"
