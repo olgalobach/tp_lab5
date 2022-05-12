@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/olga/tp_labs/lab05/banking/Account.cpp
+Account.h
+/home/olga/tp_labs/lab05/banking/Account.h
+stdexcept
+-
+
+/home/olga/tp_labs/lab05/banking/Account.h
+
+/home/olga/tp_labs/lab05/banking/Transaction.cpp
+Transaction.h
+/home/olga/tp_labs/lab05/banking/Transaction.h
+cassert
+-
+iostream
+-
+stdexcept
+-
+Account.h
+/home/olga/tp_labs/lab05/banking/Account.h
+
+/home/olga/tp_labs/lab05/banking/Transaction.h
+

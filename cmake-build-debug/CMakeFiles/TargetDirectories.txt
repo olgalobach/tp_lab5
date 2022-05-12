@@ -1,0 +1,8 @@
+/home/olga/tp_labs/lab05/cmake-build-debug/CMakeFiles/tests.dir
+/home/olga/tp_labs/lab05/cmake-build-debug/CMakeFiles/test.dir
+/home/olga/tp_labs/lab05/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/olga/tp_labs/lab05/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/olga/tp_labs/lab05/cmake-build-debug/banking/CMakeFiles/banking.dir
+/home/olga/tp_labs/lab05/cmake-build-debug/banking/CMakeFiles/test.dir
+/home/olga/tp_labs/lab05/cmake-build-debug/banking/CMakeFiles/edit_cache.dir
+/home/olga/tp_labs/lab05/cmake-build-debug/banking/CMakeFiles/rebuild_cache.dir
