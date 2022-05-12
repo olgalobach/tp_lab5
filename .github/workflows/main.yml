@@ -21,4 +21,4 @@ jobs:
            cmake --build _build
       - name: tests
         run: |
-           ls -l /home/runner
+           ls -l /home/runner/work
