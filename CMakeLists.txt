@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.4)
 
+include_directories("${CMAKE_SOURCE_DIR}/banking")
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -9,7 +10,7 @@ set(
   CACHE STRING "Default cache server"
 )
 
-include("https://github.com/hunter-packages/gate/blob/81fb5bc89eda1327c3ecb2c21e1ec2f8af6b3e85/cmake/HunterGate.cmake")
+include("cmake/HunterGate.cmake")
 
 huntergate(
   URL "https://github.com/cpp-pm/hunter/archive/v0.23.314.tar.gz"
