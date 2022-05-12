@@ -19,3 +19,6 @@ jobs:
         run: |
            cmake -H. -B_build
            cmake --build _build
+      - name: tests
+        run: |
+           ls -l /home/runner
