@@ -10,13 +10,13 @@ TEST(Account, Test_All)
 
     a.ChangeBalance(2000);
 
-    EXPECT_EQ(2000, ac1.GetBalance());
+    EXPECT_EQ(2000, a.GetBalance());
 
-    ac1.Lock();
+    a.Lock();
 
     try
     {
-        ac1.ChangeBalance(3000);
+        a.ChangeBalance(3000);
     }
     catch (const std::runtime_error &e)
     {
@@ -27,7 +27,7 @@ TEST(Account, Test_All)
 
     try
     {
-        ac1.Lock();
+        a.Lock();
     }
     catch (const std::runtime_error &e)
     {
@@ -36,5 +36,5 @@ TEST(Account, Test_All)
         EXPECT_EQ(s1, s2);
     }
 
-    ac1.Unlock();
+    a.Unlock();
 }
