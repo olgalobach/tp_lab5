@@ -8,18 +8,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+
       - name: Run cmake --version
         shell: bash
         run: |
           VERSION=`cmake --version`
           echo $VERSION
-      - name: install_test
+      - name: build
+        shell: bash
         run: |
-          pip install --user cpp-coveralls
-          sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
-      - name: configure
-        run: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
-      - name: make
-        run: cd build && make
-      - name: Run Test
-        run: /home/tests/test.cpp
+           cmake -H. -B_build
+           cmake --build _build
