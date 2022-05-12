@@ -21,4 +21,4 @@ jobs:
            cmake --build _build
       - name: tests
         run: |
-           /home/runner/work/tp_lab5/tp_lab5/tests/test.cpp
+           ./home/runner/work/tp_lab5/tp_lab5/tests/test.cpp
