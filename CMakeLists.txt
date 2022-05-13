@@ -38,6 +38,8 @@ target_link_libraries(
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
 
+add_subdirectory(banking)
+
 target_include_directories(banking
    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 )
