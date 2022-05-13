@@ -19,3 +19,6 @@ jobs:
         run: |
            cmake -H. -B_build
            cmake --build _build
+      - name: tests
+        run: |
+           /home/runner/work/tp_lab5/tp_lab5/_build/tests
