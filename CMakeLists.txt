@@ -22,13 +22,11 @@ hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
 find_package(Threads)
 
-# 2
 add_executable(
   tests
   ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
 )
 
-# 3
 target_link_libraries(
   tests
   ${CMAKE_THREAD_LIBS_INIT}
@@ -37,18 +35,8 @@ target_link_libraries(
   banking
 )
 
-# 4
 enable_testing()
 add_test(NAME unit_tests COMMAND tests)
-#[[hunter_add_package(GTest)
-find_package(GTest CONFIG REQUIRED)
-target_link_libraries(foo GTest::gtest_main) # GTest::gtest will be linked automatically
-target_link_libraries(boo GTest::gtest)]]
-
-add_subdirectory(banking)
-#[[add_executable(tests
-    ${CMAKE_CURRENT_SOURCE_DIR}/test.cpp
-)]]
 
 target_include_directories(banking
    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
@@ -57,9 +45,3 @@ target_include_directories(banking
 target_include_directories(tests
    PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 )
-
-
-#target_link_libraries(tests GTest::main banking)
-
-#[[enable_testing()
-add_test(NAME unit_tests COMMAND tests)]]
